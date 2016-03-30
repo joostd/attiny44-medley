@@ -43,7 +43,7 @@ See also [Sean Voisen's blog post](http://sean.voisen.org/blog/2011/10/breathing
 
 ![breathe](images/breathe_bb-halfsize.png "breathing LED")
 
-- [fritzing file](breathe.fzz)
+- [fritzing file](fritzing/breathe.fzz)
 
 # RGB Lamp
 Use an RGB LED, some resitors and a ping pong ball to build a color-shifting lamp, similar to a [Philips LivingColors](http://www.livingcolors.philips.com) table lamp.
@@ -51,7 +51,7 @@ Use an RGB LED, some resitors and a ping pong ball to build a color-shifting lam
 
 ![rgb](images/rgb-lamp-halfsize.png "rgb lamp")
 
-- [fritzing file](rgb-lamp.fzz)
+- [fritzing file](fritzing/rgb-lamp.fzz)
 - [Arduino code](living-color/living-color.ino)
 
 Use a blank ping pong ball as a diffuser.
@@ -66,7 +66,7 @@ Use an electret microphone to control an LED by clapping your hands.
 
 ![clap](images/clapon_bb-halfsize.png "clap-on LED")
 
-- [fritzing file](clapon.fzz)
+- [fritzing file](fritzing/clapon.fzz)
 - [Arduino code](clap-on/clap-on.ino)
 
 # Programming
@@ -79,3 +79,4 @@ Use the following wiring scheme (refer to the pinout above):
 
 ![prog](images/programming_bb_halfsize.png "programming")
 
+- [fritzing file](fritzing/programming.fzz)
