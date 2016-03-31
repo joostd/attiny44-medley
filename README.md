@@ -80,3 +80,19 @@ Use the following wiring scheme (refer to the pinout above):
 ![prog](images/programming_bb_halfsize.png "programming")
 
 - [fritzing file](fritzing/programming.fzz)
+
+## Programming using an Arduino Uno
+
+To use an Arduino Uno as a programmer, upload the ArduinoISP sketch (from the Arduino *File | Examples* menu) to your Arduino Uno, and wire your Uno to the ATtiny44 as follows:
+
+| 10 | RESET |
+| 11 | MOSI  |
+| 12 | MISO  |
+| 13 | SCK   |
+
+Optionally, also connect LEDs with current-limiting resistors on pins 7 (programming), 8 (error), and 9 (heartbeat).
+
+Now, in the *Tools* menu, select Board "ATtiny", Processor "ATtiny44", Clock "1 MHz (internal)", and Programmer "ArduinoISP".
+
+Finally, open the sketch intended for the ATtiny44, and select *Upload Using Programmer*.
+
