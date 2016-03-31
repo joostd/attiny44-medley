@@ -96,7 +96,7 @@ To use an Arduino Uno as a programmer, upload the ArduinoISP sketch (from the Ar
 
 Optionally, also connect LEDs with current-limiting resistors on pins 7 (programming), 8 (error), and 9 (heartbeat).
 
-Now, in the *Tools* menu, select Board "ATtiny", Processor "ATtiny44", Clock "1 MHz (internal)", and Programmer "ArduinoISP".
+Now, in the *Tools* menu, select Board "ATtiny", Processor "ATtiny44", Clock "1 MHz (internal)", and Programmer "Arduino as ISP" (not to be confused with "ArduinoISP").
 
 Finally, open the sketch intended for the ATtiny44, and select *Upload Using Programmer*.
 
