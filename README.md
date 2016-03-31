@@ -3,7 +3,7 @@ Atmel attiny44-based medley of fun circuits
 
 # Bill of materials
 
-- attiny44A microcontroller
+- ATtiny44A microcontroller
 - one 170 point breadboard
 - two AA batteries (1.5V)
 - Battery holder for 2 AA batteries
@@ -75,6 +75,8 @@ The attiny44a doesn't have a bootloader nor a hardware UART we can use for progr
 
 You can use an Arduino or a Raspberry Pi for programming, or some dedicated hardware like an [Arduino ISP](https://www.arduino.cc/en/Main/ArduinoISP).
 
+## Programming using an ArduinoISP
+
 Use the following wiring scheme (refer to the pinout above):
 
 ![prog](images/programming_bb_halfsize.png "programming")
@@ -85,6 +87,8 @@ Use the following wiring scheme (refer to the pinout above):
 
 To use an Arduino Uno as a programmer, upload the ArduinoISP sketch (from the Arduino *File | Examples* menu) to your Arduino Uno, and wire your Uno to the ATtiny44 as follows:
 
+| Pin | SPI signal |
+| --- | --- |
 | 10 | RESET |
 | 11 | MOSI  |
 | 12 | MISO  |
