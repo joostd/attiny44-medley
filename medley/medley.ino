@@ -2,16 +2,19 @@
 // attiny44 version
 // based on code by klb
 
-# led on Pin5
-# electret microphone on GND and Pin0
-
-int led = 5;
+// electret microphone on GND and Pin0
+// RGB LED on pins 6,7,8 (can use PWM)
+int r = 6;
+int g = 7;
+int b = 8;
 
 int aDiff, aDiff2, sensitivity;
 bool isOn;
 
 void setup() {
-  pinMode(led, OUTPUT);
+  pinMode(r, OUTPUT);     
+  pinMode(g, OUTPUT);     
+  pinMode(b, OUTPUT);     
   pinMode(A0, INPUT);
   digitalWrite(A0, HIGH); // pull down
   sensitivity = 3;
@@ -34,7 +37,19 @@ void loop() {
   aDiff = aMax - aMin;
   if( aDiff > aDiff2 * sensitivity ) {
     isOn = !isOn;
-    digitalWrite(led, isOn);
   }
   aDiff2 = aDiff;
+  int red, green, blue = 0;
+  if( isOn ) {
+    float t = (float) millis();
+    // suppress dominant red
+    red = 64+floor(64*sin(t * PI / 50000));
+    green = 128+floor(128*sin(t * PI / 60000));
+    blue = 128+floor(128*sin(t * PI / 70000));
+  } else {
+    red = green = blue = 0;
+  }
+  analogWrite(r, red);
+  analogWrite(g, green);
+  analogWrite(b, blue);  
 }
